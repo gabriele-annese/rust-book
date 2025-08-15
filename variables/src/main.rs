@@ -2,7 +2,7 @@
 const CONST_STRING: &str = "context of constant string";
 
 fn main() {
-    /**
+    /*
      * The variable on Rust are immutable by default.
      * To declare a mutable variable we need to add the "mut" key word after let
      */
@@ -14,7 +14,7 @@ fn main() {
     // Constant in Rust
     println!("This instance is my constant: {CONST_STRING}");
 
-    /**
+    /*
      * In rust u can create a "shadown" variable.
      * For example if u create a no mutable variable A
      * let A = 5;
@@ -29,4 +29,19 @@ fn main() {
     }
     let shadow = "I like coffee";
     println!("This is a value of shadow variable now: '{shadow}'");
+
+
+    // Expression value
+    let x = {
+        let y= 6;
+        y * 3
+    };
+
+    println!("This is the expression value {x}");
+    println!("This is my value expression {x} + 1  = {}", plus_one(x));
+}
+
+
+fn plus_one(x :i32) -> i32{
+   return x + 1;
 }
